@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Rioma Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rioma Regular'), url('Rioma-Regular-BF64dd839414854.woff') format('woff');
+}
+
+h1{
+    font-family: 'Rioma Regular';
+    font-weight: 200;
+    color: lightblue;
+}
