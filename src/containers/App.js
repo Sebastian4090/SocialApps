@@ -1,68 +1,66 @@
-import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
+import { setSearchField, requestSocials } from '../actions';
 
-import { setSearchField } from '../actions';
+// const mapStateToProps = state => {
+//     return {
+//         searchField: state.searchApps.searchField,
+//         socials: state.requestApps.socials,
+//         isPending: state.requestApps.isPending,
+//         error: state.requestApps.error
+//     }
+// }
 
-const mapStateToProps = state => {
-    return {
-        searchField: state.searchField
-    }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        onSearchChange: (event) => dispatch(setSearchField(event.target.value))
-    }
-}
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+//         onRequestSocials: () => dispatch(RequestSocials())
+//     }
+// }
 
 
-function App(props) {
+const App = ({ store }) => {
+    const [searchResults, setSearchResults] = useState([])
 
-    const [socials, setSocials] = useState([]);
-    // const [searchfield, setSearchfield] = useState('');
+    const text = useSelector(state => state.searchApps.searchField)
+
+    const socialApps = useSelector(state => state.requestApps.socials)
+
+    const dispatch = useDispatch();
+
+    const onSearchChange = (e) => {
+        dispatch(setSearchField(e.target.value))
+    };
 
     useEffect(() => {
-        let sitesArray = [];
-        const urls = ['https://my-json-server.typicode.com/Sebastian4090/SocialsDB/Socials',
-                      'https://my-json-server.typicode.com/Sebastian4090/SocialsDB/Socials2'];
-        
-        Promise.all(urls.map(link => {
-            return fetch(link).then(response => response.json());
-        })).then(sites => {
-            for (let i=0;i<sites[0].length;i++) {
-                sitesArray.push(sites[0][i])
-            }
-            for (let i=0;i<sites[1].length;i++) {
-                sitesArray.push(sites[1][i])
-            }
+        dispatch(requestSocials());
+    }, [dispatch])
 
-            setSocials(sitesArray);
-        })
+    useEffect(() => {
+        let filteredSocials = socialApps.filter(socials => {
+            return(
+                socials.name.toLowerCase().includes(text.toLowerCase())
+            );
+        });
+        setSearchResults(filteredSocials);
+    }, [text, socialApps])
 
-    }, []);
+    const newSocial = searchResults;
 
-    // const onSearchChange = (event) => {
-    //     setSearchfield(event.target.value)
-    // }
-
-    const { searchField, onSearchChange } = props; 
-
-    const filteredSocials = socials.filter(site =>{
-        return site.domain.toLowerCase().includes(searchField.toLowerCase());
-    })
-    return !socials.length ? <h1 className='tc'>Loading</h1>:
-        (
+    return (
             <div className='tc'>
                 <h1 className='f1'>SocialApps</h1>
                 <SearchBox searchChange={onSearchChange}/>
                 <Scroll>
                     <ErrorBoundry>
-                    <CardList socials={filteredSocials}/>
+                        {
+                            text === "" ? <CardList socials={socialApps}/> : <CardList socials={newSocial}/>
+                        }
                     </ErrorBoundry>
                 </Scroll>
             </div>
@@ -71,4 +69,4 @@ function App(props) {
     
         
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
