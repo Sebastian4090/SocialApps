@@ -6,6 +6,7 @@ import Scroll from '../components/Scroll';
 import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
 import { setSearchField, requestSocials } from '../actions';
+import Header from '../components/Header';
 
 // const mapStateToProps = state => {
 //     return {
@@ -54,7 +55,7 @@ const App = ({ store }) => {
 
     return (
             <div className='tc'>
-                <h1 className='f1'>SocialApps</h1>
+                <Header />
                 <SearchBox searchChange={onSearchChange}/>
                 <Scroll>
                     <ErrorBoundry>
