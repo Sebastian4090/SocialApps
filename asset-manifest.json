@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/SocialApps/static/css/main.8e4f5be2.css",
-    "main.js": "/SocialApps/static/js/main.c3fa9880.js",
+    "main.js": "/SocialApps/static/js/main.90cc8046.js",
     "static/js/496.3c4e7510.chunk.js": "/SocialApps/static/js/496.3c4e7510.chunk.js",
     "service-worker.js": "/SocialApps/service-worker.js",
     "static/media/Rioma-Regular-BF64dd839414854.woff": "/SocialApps/static/media/Rioma-Regular-BF64dd839414854.1370e0c2fb5cafb1b2bb.woff",
     "index.html": "/SocialApps/index.html",
     "main.8e4f5be2.css.map": "/SocialApps/static/css/main.8e4f5be2.css.map",
-    "main.c3fa9880.js.map": "/SocialApps/static/js/main.c3fa9880.js.map",
+    "main.90cc8046.js.map": "/SocialApps/static/js/main.90cc8046.js.map",
     "496.3c4e7510.chunk.js.map": "/SocialApps/static/js/496.3c4e7510.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8e4f5be2.css",
-    "static/js/main.c3fa9880.js"
+    "static/js/main.90cc8046.js"
   ]
 }
