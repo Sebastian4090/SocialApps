@@ -8,16 +8,25 @@ import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
 import { searchApps, requestApps } from './reducers';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration.js';
+// import * as serviceWorkerRegistration from './serviceWorkerRegistration.js';
 import { thunk } from 'redux-thunk';
 
-serviceWorkerRegistration.register();
 const logger = createLogger;
 const rootReducer = combineReducers({ searchApps, requestApps });
 const store = 
   createStore(rootReducer, applyMiddleware(thunk, logger));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function() {
+    navigator.serviceWorker
+      .register("./serviceWorkerRegistration.js")
+      .then(res => console.log("service worker registered"))
+      .catch(err => console.log("service worker not registered", err))
+  })
+}
+
 root.render(
   <React.StrictMode>
     <div>
