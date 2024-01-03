@@ -1,4 +1,5 @@
 @font-face {
+    font-display: swap;
     font-family: 'Rioma Regular';
     font-style: normal;
     font-weight: normal;
@@ -9,4 +10,9 @@ h1{
     font-family: 'Rioma Regular';
     font-weight: 200;
     color: lightblue;
+}
+
+img{
+    max-width: 256px;
+    height: auto;
 }
