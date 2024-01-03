@@ -8,22 +8,6 @@ import './App.css';
 import { setSearchField, requestSocials } from '../actions';
 import Header from '../components/Header';
 
-// const mapStateToProps = state => {
-//     return {
-//         searchField: state.searchApps.searchField,
-//         socials: state.requestApps.socials,
-//         isPending: state.requestApps.isPending,
-//         error: state.requestApps.error
-//     }
-// }
-
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
-//         onRequestSocials: () => dispatch(RequestSocials())
-//     }
-// }
-
 
 const App = ({ store }) => {
     const [searchResults, setSearchResults] = useState([])
