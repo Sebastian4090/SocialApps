@@ -8,10 +8,12 @@ import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
 import { searchApps, requestApps } from './reducers';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration.js';
 import { thunk } from 'redux-thunk';
 
+serviceWorkerRegistration.register();
 const logger = createLogger;
-const rootReducer = combineReducers({ searchApps, requestApps })
+const rootReducer = combineReducers({ searchApps, requestApps });
 const store = 
   createStore(rootReducer, applyMiddleware(thunk, logger));
 
