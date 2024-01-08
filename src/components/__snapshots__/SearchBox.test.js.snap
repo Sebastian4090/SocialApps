@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render SearchBox component 1`] = `
+<div
+  className="pa2"
+>
+  <input
+    className="pa3 ba b--green bg-lightest-blue"
+    onChange="a"
+    placeholder="search sites"
+    type="search"
+  />
+</div>
+`;

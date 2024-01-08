@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render Header component 1`] = `
+<h1
+  className="f1"
+>
+  SocialApps
+</h1>
+`;
