@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders MainPage without crashing 1`] = `
+<div
+  className="tc"
+>
+  <Memo() />
+  <SearchBox
+    searchChange={[MockFunction]}
+  />
+  <Scroll>
+    <ErrorBoundry>
+      <CardList
+        socials={Array []}
+      />
+    </ErrorBoundry>
+  </Scroll>
+</div>
+`;

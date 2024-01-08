@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render Card component 1`] = `
+<div
+  className="bg-light-blue dib br3 pa3 ma2 grow bw2 shadow-5"
+>
+  <img
+    alt="social"
+    src="https://cdn1.iconfinder.com/data/icons/social-media-rounded-corners/512/Rounded_undefined_svg-256.png"
+  />
+  <div>
+    <h2 />
+    <p />
+  </div>
+</div>
+`;

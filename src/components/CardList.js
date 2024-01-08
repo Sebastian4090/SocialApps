@@ -4,7 +4,6 @@ import Card from './Card';
 
 
 const CardList = ({ socials }) =>{
-    console.log('cardlist!')
 
     return (
         <div>

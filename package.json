@@ -29,9 +29,15 @@
     "workbox-streams": "^6.6.0"
   },
   "devDependencies": {
+    "@cfaester/enzyme-adapter-react-18": "^0.7.1",
     "@svgr/webpack": "^8.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
     "gh-pages": "^6.1.1",
     "react-scripts": "^5.0.1"
+  },
+  "jest": {
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "overrides": {
     "@svgr/webpack": "$@svgr/webpack"
@@ -39,7 +45,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scriptstest",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"

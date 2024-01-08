@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import CardList from '../components/CardList';
-import SearchBox from '../components/SearchBox';
-import Scroll from '../components/Scroll';
-import ErrorBoundry from '../components/ErrorBoundry';
-import './App.css';
 import { setSearchField, requestSocials } from '../actions';
-import Header from '../components/Header';
+
+import './App.css';
+import MainPage from '../components/MainPage';
 
 
 const App = ({ store }) => {
-    const [searchResults, setSearchResults] = useState([])
 
     const text = useSelector(state => state.searchApps.searchField)
 
@@ -20,37 +16,21 @@ const App = ({ store }) => {
 
     const onSearchChange = (e) => {
         dispatch(setSearchField(e.target.value))
+        console.log('DISPATCH SEARCH', e.target.value)
     };
 
     useEffect(() => {
         dispatch(requestSocials());
     }, [dispatch])
 
-    useEffect(() => {
-        let filteredSocials = socialApps.filter(socials => {
-            return(
-                socials.name.toLowerCase().includes(text.toLowerCase())
-            );
-        });
-        setSearchResults(filteredSocials);
-    }, [text, socialApps])
-
-    const newSocial = searchResults;
 
     return (
-            <div className='tc'>
-                <Header />
-                <SearchBox searchChange={onSearchChange}/>
-                <Scroll>
-                    <ErrorBoundry>
-                        {
-                            text === "" ? <CardList socials={socialApps}/> : <CardList socials={newSocial}/>
-                        }
-                    </ErrorBoundry>
-                </Scroll>
-            </div>
-            );
-        }
+        <MainPage socials={socialApps} 
+                  text={text} 
+                  onSearchChange={onSearchChange} 
+                  />
+    );
+}
     
         
 

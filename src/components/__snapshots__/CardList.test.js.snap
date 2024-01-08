@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to render CardList component 1`] = `
+<div>
+  <Card
+    domain="testSite"
+    key="1"
+    link="test.pl"
+    name="test"
+  />
+</div>
+`;
