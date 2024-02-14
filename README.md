@@ -10,6 +10,10 @@ To start:
 2.    Run npm install
 3.    Run npm start
 
+Or:
+
+Visit my website: https://sebastian4090.github.io/SocialApps/
+
 Last Updated: 14.02.2024
 
 Last Publish to Github Pages: 16.01.2024
