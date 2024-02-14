@@ -1,7 +1,8 @@
 # SocialApps
 
 
-Made using: REACT
+I've developed this using: <br/>
+[![List](https://skillicons.dev/icons?i=js,react,redux,jest)](https://skillicons.dev) <br/>
 
 To start:
 
