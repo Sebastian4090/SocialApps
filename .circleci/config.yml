@@ -18,9 +18,9 @@ jobs:
         command: |
           echo 'Hello World!'
           echo 'Double trouble!'
-  workflows:
-    version: 2
-    firstb_secondb:
-      jobs:
-        - firstb
-        - secondb
+workflows:
+  version: 2
+  firstb_secondb:
+    jobs:
+      - firstb
+      - secondb
