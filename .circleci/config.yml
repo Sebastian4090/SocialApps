@@ -22,5 +22,5 @@ workflows:
   version: 2
   bobby_sally:
     jobs:
-      - firstb
-      - secondb
+      - bobby
+      - sally
