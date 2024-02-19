@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  firstb:
+  bobby:
     docker:
       - image: alpine:3.15
     steps:
@@ -9,18 +9,18 @@ jobs:
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
-  secondb:
-  docker:
-    - image: alpine:3.15
-  steps:
-    - run:
-        name: The First Step
-        command: |
-          echo 'Hello World!'
-          echo 'Double trouble!'
+  sally:
+    docker:
+      - image: alpine:3.15
+    steps:
+      - run:
+          name: The First Step
+          command: |
+            echo 'Hello World!'
+            echo 'Double trouble!'
 workflows:
   version: 2
-  firstb_secondb:
+  bobby_sally:
     jobs:
       - firstb
       - secondb
