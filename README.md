@@ -1,4 +1,5 @@
 # <p align=center>![SocialApps](https://github.com/Sebastian4090/SocialApps/assets/139238509/8820f4e2-7e8b-4787-b2b7-477a7293fabb)</p>
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Sebastian4090/SocialApps)
 
 
 
