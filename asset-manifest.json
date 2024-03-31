@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/SocialApps/static/css/main.5821acca.css",
-    "main.js": "/SocialApps/static/js/main.83897418.js",
-    "static/js/496.bfb0a28b.chunk.js": "/SocialApps/static/js/496.bfb0a28b.chunk.js",
-    "service-worker.js": "/SocialApps/service-worker.js",
+    "main.css": "/SocialApps/static/css/main.884096fc.css",
+    "main.js": "/SocialApps/static/js/main.5864e4ba.js",
+    "static/js/496.6a5642bd.chunk.js": "/SocialApps/static/js/496.6a5642bd.chunk.js",
     "static/media/Rioma-Regular-BF64dd839414854.woff": "/SocialApps/static/media/Rioma-Regular-BF64dd839414854.1370e0c2fb5cafb1b2bb.woff",
+    "service-worker.js": "/SocialApps/service-worker.js",
     "index.html": "/SocialApps/index.html",
-    "main.5821acca.css.map": "/SocialApps/static/css/main.5821acca.css.map",
-    "main.83897418.js.map": "/SocialApps/static/js/main.83897418.js.map",
-    "496.bfb0a28b.chunk.js.map": "/SocialApps/static/js/496.bfb0a28b.chunk.js.map"
+    "main.884096fc.css.map": "/SocialApps/static/css/main.884096fc.css.map",
+    "main.5864e4ba.js.map": "/SocialApps/static/js/main.5864e4ba.js.map",
+    "496.6a5642bd.chunk.js.map": "/SocialApps/static/js/496.6a5642bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5821acca.css",
-    "static/js/main.83897418.js"
+    "static/css/main.884096fc.css",
+    "static/js/main.5864e4ba.js"
   ]
 }
